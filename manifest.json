@@ -1,0 +1,52 @@
+{
+    "name": "星栈始动",
+    "appid": "__UNI__8B3E5F",
+    "description": "StarStack BootUp · IT技术博客移动端",
+    "versionName": "1.0.0",
+    "versionCode": "100",
+    "transformPx": false,
+    "vueVersion": "3",
+    "locale": "zh-Hans",
+    "app-plus": {
+        "usingComponents": true,
+        "nvueStyleCompiler": "uni-app",
+        "compilerVersion": 3,
+        "splashscreen": {
+            "alwaysShowBeforeRender": true,
+            "waiting": true,
+            "autoclose": true,
+            "delay": 0
+        },
+        "modules": {},
+        "distribute": {
+            "android": {
+                "permissions": [
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>"
+                ]
+            },
+            "ios": {},
+            "sdkConfigs": {}
+        }
+    },
+    "quickapp": {},
+    "mp-weixin": {
+        "appid": "",
+        "setting": {
+            "urlCheck": false
+        },
+        "usingComponents": true
+    },
+    "h5": {
+        "title": "星栈始动 StarStack BootUp",
+        "router": {
+            "mode": "hash",
+            "base": "./"
+        },
+        "devServer": {
+            "port": 5180,
+            "https": false
+        },
+        "sdkConfigs": {}
+    }
+}
