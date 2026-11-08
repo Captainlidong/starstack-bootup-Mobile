@@ -19,7 +19,16 @@
         },
         "modules": {},
         "distribute": {
+            "icons": {
+                "android": {
+                    "hdpi": "static/icons/72x72.png",
+                    "xhdpi": "static/icons/96x96.png",
+                    "xxhdpi": "static/icons/144x144.png",
+                    "xxxhdpi": "static/icons/192x192.png"
+                }
+            },
             "android": {
+                "usesCleartextTraffic": true,
                 "permissions": [
                     "<uses-permission android:name=\"android.permission.INTERNET\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>"
