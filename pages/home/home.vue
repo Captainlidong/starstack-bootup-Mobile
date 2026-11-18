@@ -54,6 +54,7 @@
 <script setup>
 	import { ref, computed } from 'vue'
 	import { onLoad, onShow, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
+	import { hideNativeTabBar } from '../../utils/tabbar.js'
 	import { selectPage, selectTop } from '../../api/blog.js'
 	import { store } from '../../utils/store.js'
 	import { icon } from '../../utils/icons.js'
@@ -115,7 +116,7 @@
 		loadHot()
 	})
 
-	onShow(() => { /* 角标由全局轮询维护 */ })
+	onShow(() => { /* 角标由全局轮询维护 */ hideNativeTabBar() })
 
 	onReachBottom(() => {
 		loadMore()

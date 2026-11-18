@@ -27,7 +27,8 @@
 
 <script setup>
 	import { ref } from 'vue'
-	import { onLoad, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
+	import { onLoad, onShow, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
+	import { hideNativeTabBar } from '../../utils/tabbar.js'
 	import { recommendForUser } from '../../api/blog.js'
 	import { store, isLogin } from '../../utils/store.js'
 import { icon } from '../../utils/icons.js'
@@ -64,6 +65,10 @@ import { icon } from '../../utils/icons.js'
 		await loadMore()
 	}
 
+	// 兜底隐藏原生 tabBar(App 端 hideTabBar 时机差异)
+	onShow(() => {
+		hideNativeTabBar()
+	})
 	onLoad(() => {
 		loadMore()
 	})

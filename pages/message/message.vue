@@ -44,6 +44,7 @@
 <script setup>
 	import { ref } from 'vue'
 	import { onShow, onUnload } from '@dcloudio/uni-app'
+	import { hideNativeTabBar } from '../../utils/tabbar.js'
 	import { getConversations, markRead } from '../../api/message.js'
 	import { isLogin } from '../../utils/store.js'
 	import { absUrl, fmtTime } from '../../utils/format.js'
@@ -89,6 +90,7 @@ import { icon } from '../../utils/icons.js'
 	}
 
 	onShow(() => {
+		hideNativeTabBar()
 		load()
 		refreshBadges()
 	})

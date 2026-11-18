@@ -56,6 +56,7 @@
 <script setup>
 	import { ref, computed } from 'vue'
 	import { onShow } from '@dcloudio/uni-app'
+	import { hideNativeTabBar } from '../../utils/tabbar.js'
 	import { store, isLogin, logout } from '../../utils/store.js'
 	import { spaceInfo } from '../../api/space.js'
 	import { absUrl } from '../../utils/format.js'
@@ -101,6 +102,7 @@ import { icon } from '../../utils/icons.js'
 	}
 
 	onShow(() => {
+		hideNativeTabBar()
 		loadInfo()
 	})
 

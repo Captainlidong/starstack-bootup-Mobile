@@ -2,12 +2,13 @@
 	import { initStore, store } from './utils/store.js'
 	import { connectWS } from './utils/ws.js'
 	import { refreshBadges } from './utils/badge.js'
+	import { hideNativeTabBar } from './utils/tabbar.js'
 
 	export default {
 		onLaunch() {
 			initStore()
-			// 隐藏原生 tabBar,由自绘 custom-tabbar 组件接管(字号/胶囊选中态自控)
-			uni.hideTabBar({ animation: false, fail: () => { /* 已隐藏或无 tabBar 场景忽略 */ } })
+			// 隐藏原生 tabBar,由自绘 custom-tabbar 组件接管(pages.json 已配 custom:true,此处兜底)
+			hideNativeTabBar()
 			if (store.user && store.user.token) {
 				connectWS()
 			}
@@ -17,7 +18,10 @@
 				if (store.user && store.user.token) refreshBadges()
 			}, 30000)
 		},
-		onShow() {},
+		onShow() {
+			// App 端从后台回前台时原生栏可能复活,再兜底一次
+			hideNativeTabBar()
+		},
 		onHide() {}
 	}
 </script>
