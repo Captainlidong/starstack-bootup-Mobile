@@ -46,11 +46,11 @@ export function formatRichText(html) {
 	})
 	// 表格
 	s = s.replace(/<table([^>]*)>/gi, '<table$1 style="border-collapse:collapse;width:100%;margin:12rpx 0;">')
-	s = s.replace(/<(td|th)([^>]*)>/gi, '<$1$2 style="border:1px solid #e5dcf5;padding:8rpx 12rpx;font-size:26rpx;">')
+	s = s.replace(/<(td|th)([^>]*)>/gi, '<$1$2 style="border:1px solid #e7e0d2;padding:8rpx 12rpx;font-size:26rpx;">')
 	// 代码块底色(hljs 主题类由页面样式接管颜色)
 	s = s.replace(/<pre([^>]*)>/gi, (m, attrs) => {
 		if (attrs.indexOf('style=') > -1) return m
-		return '<pre' + attrs + ' style="background:#2b2a3d;color:#f8f8f2;border-radius:14rpx;padding:20rpx;overflow-x:auto;font-size:24rpx;line-height:1.6;">'
+		return '<pre' + attrs + ' style="background:#2d3a33;color:#f8f8f2;border-radius:14rpx;padding:20rpx;overflow-x:auto;font-size:24rpx;line-height:1.6;">'
 	})
 	s = s.replace(/<code([^>]*)>/gi, (m, attrs) => {
 		if (attrs.indexOf('style=') > -1) return m
@@ -59,7 +59,7 @@ export function formatRichText(html) {
 	// 引用块
 	s = s.replace(/<blockquote([^>]*)>/gi, (m, attrs) => {
 		if (attrs.indexOf('style=') > -1) return m
-		return '<blockquote' + attrs + ' style="margin:12rpx 0;padding:12rpx 20rpx;border-left:6rpx solid #c9b8f9;background:rgba(243,232,255,.6);border-radius:8rpx;color:#7a6f96;">'
+		return '<blockquote' + attrs + ' style="margin:12rpx 0;padding:12rpx 20rpx;border-left:6rpx solid #2e6b4f;background:rgba(231,239,230,.6);border-radius:8rpx;color:#4f6455;">'
 	})
 	return s
 }

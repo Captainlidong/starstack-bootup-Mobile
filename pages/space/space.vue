@@ -208,8 +208,8 @@
 		height: 150rpx;
 		border-radius: 50%;
 		font-size: 75rpx;
-		border: 4rpx solid rgba(255, 255, 255, 0.9);
-		box-shadow: 0 10rpx 26rpx rgba(160, 120, 220, 0.3);
+		border: 4rpx solid #ffffff;
+		box-shadow: 0 10rpx 26rpx rgba(93, 84, 60, 0.3);
 	}
 
 	.sp-info {
@@ -251,20 +251,20 @@
 		border-radius: 999rpx;
 		font-size: 25rpx;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.sp-btn.plain {
-		background: rgba(255, 255, 255, 0.85);
-		color: var(--purple);
-		border: 1.5px solid rgba(139, 92, 246, 0.35);
+		background: #ffffff;
+		color: var(--primary);
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		box-shadow: none;
 	}
 
 	.sp-btn.followed {
-		background: rgba(255, 255, 255, 0.85);
+		background: #ffffff;
 		color: var(--text-sub);
-		border: 1.5px solid rgba(155, 139, 171, 0.4);
+		border: 1.5px solid rgba(141, 156, 144, 0.4);
 		box-shadow: none;
 	}
 
@@ -285,7 +285,7 @@
 	.stat-num {
 		font-size: 32rpx;
 		font-weight: bold;
-		color: var(--purple);
+		color: var(--primary);
 	}
 
 	.stat-label {
@@ -314,7 +314,7 @@
 		background: var(--brand-grad);
 		color: #ffffff;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.sp-content {

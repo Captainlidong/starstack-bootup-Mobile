@@ -315,9 +315,10 @@
 		font-size: 28rpx;
 		font-weight: bold;
 		padding: 8rpx 26rpx;
-		background: rgba(255, 255, 255, 0.25);
+		background: var(--brand-grad);
 		border-radius: 999rpx;
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		border: none;
+		box-shadow: 0 4rpx 12rpx rgba(46, 107, 79, 0.28);
 	}
 
 	.edit-body {
@@ -342,7 +343,7 @@
 		font-weight: bold;
 		color: var(--title-c);
 		padding: 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.4);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.4);
 	}
 
 	.descr-input {
@@ -369,25 +370,25 @@
 		width: 320rpx;
 		height: 190rpx;
 		border-radius: 16rpx;
-		background: #f1e9fb;
+		background: #e7efe6;
 	}
 
 	.cover-add {
 		width: 320rpx;
 		height: 190rpx;
-		border: 2.5px dashed rgba(183, 156, 255, 0.5);
+		border: 2.5px dashed rgba(46, 107, 79, 0.5);
 		border-radius: 16rpx;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 8rpx;
-		background: rgba(243, 232, 255, 0.4);
+		background: #edf2ea;
 	}
 
 	.cover-add-icon {
 		font-size: 60rpx;
-		color: var(--purple-light);
+		color: var(--primary-light);
 		line-height: 1;
 	}
 
@@ -412,8 +413,8 @@
 
 	.chip {
 		padding: 10rpx 26rpx;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(183, 156, 255, 0.35);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		border-radius: 999rpx;
 		font-size: 24rpx;
 		color: var(--title-c);
@@ -425,7 +426,7 @@
 		color: #ffffff;
 		border-color: transparent;
 		font-weight: bold;
-		box-shadow: 0 6rpx 14rpx rgba(183, 156, 255, 0.4);
+		box-shadow: 0 6rpx 14rpx rgba(46, 107, 79, 0.4);
 	}
 
 	.custom-tag-row {
@@ -439,8 +440,8 @@
 		flex: 1;
 		height: 72rpx;
 		box-sizing: border-box;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(183, 156, 255, 0.35);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		border-radius: 999rpx;
 		padding: 0 26rpx;
 		font-size: 25rpx;
@@ -466,7 +467,7 @@
 	}
 
 	.toolbar {
-		background: rgba(243, 232, 255, 0.55);
+		background: #edf2ea;
 		border-radius: 14rpx;
 		padding: 8rpx;
 		width: 100%;
@@ -491,7 +492,7 @@
 		min-width: 64rpx;
 		height: 64rpx;
 		padding: 0 14rpx;
-		background: rgba(255, 255, 255, 0.9);
+		background: #ffffff;
 		border-radius: 12rpx;
 		font-size: 27rpx;
 		font-weight: bold;
@@ -515,7 +516,7 @@
 	.content-editor {
 		width: 100%;
 		height: 600rpx;
-		background: rgba(255, 255, 255, 0.6);
+		background: #ffffff;
 		border-radius: 14rpx;
 		padding: 20rpx;
 		font-size: 28rpx;

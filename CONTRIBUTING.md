@@ -42,7 +42,7 @@ refactor: 抽离分页加载为可复用组合式函数
 |---|---|
 | Vue 3 组合式 API | 页面用 `<script setup>`,生命周期从 `@dcloudio/uni-app` 导入(onLoad/onShow/onReachBottom…) |
 | 单位 | 尺寸用 `rpx`(750rpx = 屏宽);导航栏/状态栏高度等与原生相关的用 `px` |
-| 颜色/圆角 | 一律消费 `App.vue` 中的 CSS 变量(`var(--purple)` 等),不要硬编码色值 |
+| 颜色/圆角 | 一律消费 `App.vue` 中的 CSS 变量(`var(--primary)` 等),不要硬编码色值 |
 | 组件注册 | **只走 easycom**,新建组件必须放 `components/<名>/<名>.vue` 目录式结构,页面里不写 import |
 | 接口调用 | 全部经由 `api/` 模块 + `utils/request.js`,页面禁止直接 `uni.request`;错误提示由网络层统一弹出,页面侧不要重复 toast |
 | module 取值 | 点赞/收藏/评论的 `module` 是中文字符串 `'博客'` / `'活动'`,勿改成英文 |

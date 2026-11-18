@@ -197,8 +197,8 @@
 		height: 160rpx;
 		border-radius: 50%;
 		font-size: 80rpx;
-		border: 4rpx solid rgba(255, 255, 255, 0.9);
-		box-shadow: 0 10rpx 26rpx rgba(160, 120, 220, 0.3);
+		border: 4rpx solid #ffffff;
+		box-shadow: 0 10rpx 26rpx rgba(93, 84, 60, 0.3);
 	}
 
 	.pf-avatar-mask {
@@ -228,7 +228,7 @@
 		align-items: center;
 		gap: 20rpx;
 		padding: 26rpx 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.2);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.2);
 	}
 
 	.pf-row:last-child {

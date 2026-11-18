@@ -43,10 +43,9 @@
 		left: 0;
 		right: 0;
 		z-index: 100;
-		background: linear-gradient(90deg, rgba(183, 156, 255, 0.92), rgba(248, 168, 214, 0.92));
-		backdrop-filter: blur(14px);
-		-webkit-backdrop-filter: blur(14px);
-		box-shadow: 0 6rpx 20rpx rgba(160, 120, 220, 0.25);
+		background: #fffdf8;
+		border-bottom: 1.5px solid #efe8da;
+		box-shadow: 0 4rpx 16rpx rgba(93, 84, 60, 0.06);
 	}
 
 	.navbar-inner {
@@ -73,7 +72,7 @@
 	.back-arrow {
 		font-size: 56rpx;
 		font-weight: bold;
-		color: #ffffff;
+		color: #2e6b4f;
 		padding: 0 20rpx;
 		line-height: 1;
 	}
@@ -83,7 +82,6 @@
 		text-align: center;
 		font-size: 32rpx;
 		font-weight: bold;
-		color: #ffffff;
-		text-shadow: 0 1px 2px rgba(150, 100, 200, 0.3);
+		color: #1f3d2e;
 	}
 </style>

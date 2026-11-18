@@ -146,12 +146,12 @@
         "navigationStyle": "custom",
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "星栈始动",
-        "navigationBarBackgroundColor": "#b79cff",
-        "backgroundColor": "#f6edff"
+        "navigationBarBackgroundColor": "#2e6b4f",
+        "backgroundColor": "#f7f3ea"
     },
     "tabBar": {
-        "color": "#9b8bab",
-        "selectedColor": "#8b5cf6",
+        "color": "#8d9c90",
+        "selectedColor": "#2e6b4f",
         "backgroundColor": "#ffffff",
         "borderStyle": "white",
         "list": [

@@ -113,7 +113,7 @@
 		uni.showModal({
 			title: '退出登录',
 			content: '确定要退出当前账号吗?',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					logout()
@@ -185,7 +185,7 @@
 		border-radius: 50%;
 		font-size: 60rpx;
 		flex-shrink: 0;
-		border: 3px solid rgba(255, 255, 255, 0.8);
+		border: 3px solid #ffffff;
 	}
 
 	.me-info {
@@ -229,7 +229,7 @@
 	.stat-num {
 		font-size: 34rpx;
 		font-weight: bold;
-		color: var(--purple);
+		color: var(--primary);
 	}
 
 	.stat-label {
@@ -247,7 +247,7 @@
 		align-items: center;
 		gap: 20rpx;
 		padding: 28rpx 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.2);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.2);
 	}
 
 	.menu-row:last-child {
@@ -268,17 +268,17 @@
 
 	.menu-arrow {
 		font-size: 40rpx;
-		color: #c9bfd8;
+		color: #b3bca9;
 	}
 
 	.logout-btn {
 		margin: 40rpx 24rpx 0;
 		text-align: center;
 		padding: 24rpx;
-		background: rgba(255, 255, 255, 0.8);
-		border: 1.5px solid rgba(224, 92, 92, 0.4);
+		background: #ffffff;
+		border: 1.5px solid rgba(212, 87, 78, 0.4);
 		border-radius: 999rpx;
-		color: #e05c5c;
+		color: #d4574e;
 		font-size: 29rpx;
 		font-weight: bold;
 	}

@@ -159,7 +159,7 @@
 		uni.showModal({
 			title: '删除评论',
 			content: '确定删除这条评论吗?',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					deleteComment(c.id).then(() => {
@@ -183,7 +183,7 @@
 		align-items: center;
 		gap: 14rpx;
 		padding-bottom: 20rpx;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.35);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.35);
 	}
 
 	.cmt-count {
@@ -197,7 +197,7 @@
 
 	.cmt-item {
 		padding: 20rpx 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.18);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.18);
 	}
 
 	.cmt-item:last-child {
@@ -238,12 +238,12 @@
 	.c-name {
 		font-size: 25rpx;
 		font-weight: bold;
-		color: var(--purple);
+		color: var(--primary);
 	}
 
 	.c-reply-to {
 		font-size: 22rpx;
-		color: var(--pink);
+		color: var(--accent);
 	}
 
 	.c-time {
@@ -272,14 +272,14 @@
 	}
 
 	.c-act.danger {
-		color: #e05c5c;
+		color: #d4574e;
 	}
 
 	.c-children {
 		margin-top: 16rpx;
 		margin-left: 80rpx;
 		padding: 14rpx 16rpx;
-		background: rgba(243, 232, 255, 0.45);
+		background: #edf2ea;
 		border-radius: 14rpx;
 		display: flex;
 		flex-direction: column;
@@ -292,10 +292,10 @@
 		justify-content: space-between;
 		margin: 10rpx 0;
 		padding: 10rpx 20rpx;
-		background: #f3e8ff;
+		background: #e7efe6;
 		border-radius: 12rpx;
 		font-size: 23rpx;
-		color: var(--purple);
+		color: var(--primary);
 		max-width: 100%;
 	}
 
@@ -313,8 +313,8 @@
 
 	.cmt-input-box {
 		flex: 1;
-		background: rgba(255, 255, 255, 0.9);
-		border: 1.5px solid rgba(183, 156, 255, 0.35);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		border-radius: 999rpx;
 		padding: 12rpx 26rpx;
 	}
@@ -342,9 +342,9 @@
 		margin-top: 16rpx;
 		text-align: center;
 		padding: 18rpx;
-		background: rgba(243, 232, 255, 0.6);
+		background: #edf2ea;
 		border-radius: 14rpx;
-		color: var(--purple);
+		color: var(--primary);
 		font-size: 25rpx;
 	}
 </style>

@@ -42,11 +42,11 @@
 
 	.sort-pill {
 		padding: 10rpx 26rpx;
-		background: rgba(255, 255, 255, 0.7);
+		background: #ffffff;
 		border-radius: 999rpx;
 		font-size: 24rpx;
 		color: var(--title-c);
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		border: 1.5px solid #efe8da;
 		transition: all 0.2s;
 	}
 
@@ -54,6 +54,6 @@
 		background: var(--brand-grad);
 		color: #ffffff;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 </style>

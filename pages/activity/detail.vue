@@ -124,7 +124,7 @@
 		uni.showModal({
 			title: '取消报名',
 			content: '确定要取消报名这个活动吗?',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					cancelSign(activityId.value, store.user.id).then(() => {
@@ -159,7 +159,7 @@
 			title: '举报该活动',
 			editable: true,
 			placeholderText: '请填写举报原因(必填)',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					const reason = (res.content || '').trim()
@@ -191,7 +191,7 @@
 		height: 340rpx;
 		border-radius: var(--card-radius);
 		display: block;
-		background: #f1e9fb;
+		background: #e7efe6;
 		box-shadow: var(--card-shadow);
 	}
 
@@ -200,7 +200,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 100rpx;
-		background: linear-gradient(135deg, rgba(183, 156, 255, 0.4), rgba(255, 158, 207, 0.4));
+		background: linear-gradient(135deg, rgba(231, 239, 230, 0.85), rgba(253, 241, 220, 0.85));
 	}
 
 	.actd-card {
@@ -220,7 +220,7 @@
 
 	.actd-descr {
 		font-size: 27rpx;
-		color: #8d82a3;
+		color: #8d9c90;
 		line-height: 1.6;
 	}
 
@@ -229,7 +229,7 @@
 		flex-direction: column;
 		gap: 12rpx;
 		padding: 20rpx;
-		background: rgba(243, 232, 255, 0.45);
+		background: #edf2ea;
 		border-radius: 16rpx;
 	}
 
@@ -264,13 +264,13 @@
 		flex-direction: column;
 		gap: 16rpx;
 		padding-top: 10rpx;
-		border-top: 1.5px dashed rgba(183, 156, 255, 0.35);
+		border-top: 1.5px dashed rgba(46, 107, 79, 0.35);
 	}
 
 	.actd-content-body {
 		font-size: 29rpx;
 		line-height: 1.85;
-		color: #3f3a4d;
+		color: #1f3d2e;
 		word-break: break-word;
 	}
 
@@ -286,10 +286,8 @@
 		display: flex;
 		align-items: center;
 		gap: 6rpx;
-		background: rgba(255, 255, 255, 0.92);
-		backdrop-filter: blur(14px);
-		-webkit-backdrop-filter: blur(14px);
-		border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+		background: #ffffff;
+		border-top: 1.5px solid #efe8da;
 		padding: 14rpx 16rpx;
 		z-index: 90;
 	}
@@ -314,7 +312,7 @@
 	}
 
 	.bar-item.on .bar-num {
-		color: var(--pink);
+		color: var(--accent);
 		font-weight: bold;
 	}
 
@@ -327,18 +325,18 @@
 		flex: 2.2;
 		text-align: center;
 		padding: 20rpx 0;
-		background: var(--mint-grad);
+		background: var(--brand-grad);
 		color: #ffffff;
 		border-radius: 999rpx;
 		font-size: 28rpx;
 		font-weight: bold;
-		box-shadow: 0 8rpx 20rpx rgba(52, 211, 153, 0.4);
+		box-shadow: 0 8rpx 20rpx rgba(46, 107, 79, 0.3);
 	}
 
 	.bar-sign.signed {
-		background: rgba(255, 255, 255, 0.9);
-		color: var(--mint-1);
-		border: 1.5px solid rgba(52, 211, 153, 0.5);
+		background: #ffffff;
+		color: var(--primary);
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		box-shadow: none;
 	}
 </style>

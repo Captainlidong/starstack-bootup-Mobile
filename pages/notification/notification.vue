@@ -163,8 +163,8 @@
 	}
 
 	.ntf-row.unread {
-		border-color: rgba(232, 97, 156, 0.45);
-		background: rgba(255, 240, 248, 0.9);
+		border-color: rgba(233, 162, 59, 0.45);
+		background: rgba(253, 241, 220, 0.55);
 	}
 
 	.ntf-icon {
@@ -175,7 +175,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 40rpx;
-		background: rgba(243, 232, 255, 0.8);
+		background: #edf2ea;
 		flex-shrink: 0;
 	}
 

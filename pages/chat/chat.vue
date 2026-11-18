@@ -207,16 +207,16 @@
 		max-width: 65%;
 		padding: 18rpx 26rpx;
 		border-radius: 22rpx;
-		background: rgba(255, 255, 255, 0.95);
+		background: #ffffff;
 		color: var(--text-main);
 		font-size: 28rpx;
 		line-height: 1.6;
 		word-break: break-all;
-		box-shadow: 0 4rpx 14rpx rgba(160, 120, 220, 0.12);
+		box-shadow: 0 4rpx 14rpx rgba(93, 84, 60, 0.12);
 	}
 
 	.msg-row.mine .bubble {
-		background: linear-gradient(135deg, #b79cff, #a78bfa);
+		background: linear-gradient(135deg, #3f8265, #2e6b4f);
 		color: #ffffff;
 		border-top-right-radius: 6rpx;
 	}
@@ -238,10 +238,8 @@
 		align-items: flex-end;
 		gap: 16rpx;
 		padding: 16rpx 24rpx;
-		background: rgba(255, 255, 255, 0.95);
-		backdrop-filter: blur(14px);
-		-webkit-backdrop-filter: blur(14px);
-		border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+		background: #ffffff;
+		border-top: 1.5px solid #efe8da;
 		z-index: 90;
 	}
 
@@ -249,8 +247,8 @@
 		flex: 1;
 		min-height: 80rpx;
 		max-height: 200rpx;
-		background: rgba(243, 232, 255, 0.6);
-		border: 1.5px solid rgba(183, 156, 255, 0.35);
+		background: #edf2ea;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
 		border-radius: 20rpx;
 		padding: 14rpx 24rpx;
 		font-size: 28rpx;

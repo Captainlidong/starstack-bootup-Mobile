@@ -21,29 +21,33 @@
 </script>
 
 <style>
-	/* ==================== 星栈萌系设计体系 ==================== */
+	/* ==================== 星栈奶油风设计体系 ==================== */
+	/* 奶油米白底 + 白色扁平卡片 + 治愈墨绿主色 + 暖杏橙点缀 */
 	page {
-		--brand-grad: linear-gradient(135deg, #b79cff, #ff9ecf);
-		--brand-1: #b79cff;
-		--brand-2: #ff9ecf;
-		--purple: #8b5cf6;
-		--purple-light: #a78bfa;
-		--pink: #e8619c;
-		--title-c: #6b5b95;
-		--text-main: #4a4458;
-		--text-sub: #9b8bab;
-		--mint-grad: linear-gradient(135deg, #6ee7b7, #34d399);
-		--mint-1: #34d399;
-		--card-bg: rgba(255, 255, 255, 0.82);
-		--card-border: rgba(255, 255, 255, 0.55);
-		--card-shadow: 0 10rpx 30rpx rgba(160, 120, 220, 0.16);
+		--brand-grad: linear-gradient(135deg, #35785a, #2e6b4f);
+		--brand-1: #2e6b4f;
+		--brand-2: #3f8265;
+		--primary: #2e6b4f;
+		--primary-light: #3f8265;
+		--primary-soft: #e7efe6;
+		--accent: #e9a23b;
+		--accent-grad: linear-gradient(135deg, #f2b558, #e9a23b);
+		--accent-1: #e9a23b;
+		--accent-soft: #fdf1dc;
+		--danger: #d4574e;
+		--title-c: #1f3d2e;
+		--text-main: #3d4a41;
+		--text-sub: #8d9c90;
+		--card-bg: #ffffff;
+		--card-border: #efe8da;
+		--card-shadow: 0 8rpx 24rpx rgba(93, 84, 60, 0.08);
 		--card-radius: 24rpx;
 
 		min-height: 100%;
-		background-color: #f3e8fb;
-		background-image: linear-gradient(160deg, #c9b8f9 0%, #e3c7f7 22%, #ffd7ee 48%, #ffeaf5 66%, #c8f3e2 100%);
+		background-color: #f7f3ea;
+		background-image: linear-gradient(180deg, #f9f6ee 0%, #f3eee2 100%);
 		background-attachment: fixed;
-		color: #4a4458;
+		color: #3d4a41;
 		font-size: 28rpx;
 	}
 
@@ -86,7 +90,7 @@
 	}
 
 	.ph {
-		color: #b9aecb;
+		color: #b3bca9;
 	}
 
 	/* ==================== 通用工具类 ==================== */
@@ -104,8 +108,6 @@
 		border: 1.5px solid var(--card-border);
 		border-radius: var(--card-radius);
 		box-shadow: var(--card-shadow);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.line1 {
@@ -125,8 +127,8 @@
 	.tag {
 		display: inline-block;
 		padding: 4rpx 18rpx;
-		background: #f3e8ff;
-		color: var(--purple);
+		background: var(--primary-soft);
+		color: var(--primary);
 		border-radius: 999rpx;
 		font-size: 22rpx;
 		line-height: 1.6;
@@ -138,7 +140,7 @@
 		color: var(--title-c);
 	}
 
-	/* 主按钮:品牌渐变胶囊 */
+	/* 主按钮:治愈墨绿实色胶囊 */
 	.pill-btn {
 		display: flex;
 		align-items: center;
@@ -151,7 +153,7 @@
 		font-weight: bold;
 		letter-spacing: 4rpx;
 		line-height: 1.45;
-		box-shadow: 0 8rpx 24rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 8rpx 24rpx rgba(46, 107, 79, 0.28);
 		transition: transform 0.15s, opacity 0.15s;
 	}
 
@@ -164,18 +166,18 @@
 		opacity: 0.55;
 	}
 
-	/* 次级按钮:白底紫字胶囊 */
+	/* 次级按钮:白底绿字胶囊 */
 	.pill-btn.plain {
-		background: rgba(255, 255, 255, 0.85);
-		color: var(--purple);
-		border: 1.5px solid rgba(139, 92, 246, 0.35);
-		box-shadow: 0 6rpx 18rpx rgba(160, 120, 220, 0.12);
+		background: #ffffff;
+		color: var(--primary);
+		border: 1.5px solid rgba(46, 107, 79, 0.30);
+		box-shadow: 0 6rpx 18rpx rgba(93, 84, 60, 0.08);
 	}
 
-	/* 薄荷绿按钮(成功/报名) */
+	/* 暖杏橙按钮(强调/成功) */
 	.pill-btn.mint {
-		background: var(--mint-grad);
-		box-shadow: 0 8rpx 24rpx rgba(52, 211, 153, 0.4);
+		background: var(--accent-grad);
+		box-shadow: 0 8rpx 24rpx rgba(233, 162, 59, 0.30);
 	}
 
 	/* 头像占位 */
@@ -183,8 +185,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, #e9dcff, #ffd9f0);
-		color: #b08ae0;
+		background: linear-gradient(135deg, #e7efe6, #fdf1dc);
+		color: #7d9c88;
 		overflow: hidden;
 	}
 

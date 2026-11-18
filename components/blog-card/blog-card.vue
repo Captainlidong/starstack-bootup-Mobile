@@ -65,17 +65,17 @@
 		transform: scale(0.985);
 	}
 
-	/* 马卡龙三色交替 */
+	/* 奶油风三色交替:白 / 暖奶 / 浅鼠尾草(极淡) */
 	.blog-card.macaron-0 {
-		background: rgba(255, 255, 255, 0.82);
+		background: #ffffff;
 	}
 
 	.blog-card.macaron-1 {
-		background: rgba(255, 240, 248, 0.88);
+		background: #fefcf6;
 	}
 
 	.blog-card.macaron-2 {
-		background: rgba(233, 250, 243, 0.88);
+		background: #f8fbf5;
 	}
 
 	.blog-main {
@@ -104,18 +104,18 @@
 	}
 
 	.top-tag {
-		background: linear-gradient(135deg, #ff9ecf, #e8619c);
+		background: linear-gradient(135deg, #f2b558, #e9a23b);
 		color: #ffffff;
 	}
 
 	.pv-tag {
-		background: #e0f2fe;
-		color: #0284c7;
+		background: #e7efe6;
+		color: #2e6b4f;
 	}
 
 	.st-DRAFT {
-		background: #f1f5f9;
-		color: #64748b;
+		background: #f1efe9;
+		color: #8d9c90;
 	}
 
 	.st-PENDING {
@@ -130,7 +130,7 @@
 
 	.blog-descr {
 		font-size: 25rpx;
-		color: #8d82a3;
+		color: #8d9c90;
 		line-height: 1.5;
 	}
 
@@ -160,7 +160,7 @@
 
 	.author-name {
 		font-size: 24rpx;
-		color: var(--purple);
+		color: var(--primary);
 		max-width: 180rpx;
 	}
 
@@ -194,6 +194,6 @@
 		height: 140rpx;
 		border-radius: 14rpx;
 		flex-shrink: 0;
-		background: #f1e9fb;
+		background: #e7efe6;
 	}
 </style>

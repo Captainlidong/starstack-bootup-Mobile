@@ -16,7 +16,7 @@
 | 富文本编辑 | 内置 `editor` 组件 | H5/App 均支持,输出标准 HTML,与 wangEditor 内容兼容 |
 | 实时通信 | `uni.connectSocket` | 复用 Web 端 WebSocket 私信协议 |
 
-**为什么不用 UI 库(uview/uni-ui)?** 项目视觉是定制的「星栈萌系」设计体系(渐变/毛玻璃/胶囊),UI 库反而要大量覆写样式;核心交互组件(卡片/评论/导航栏)自研成本更低、可控性更强。
+**为什么不用 UI 库(uview/uni-ui)?** 项目视觉是定制的「星栈奶油风」设计体系(治愈墨绿/暖杏橙/胶囊,2026-11 由萌系粉紫改版),UI 库反而要大量覆写样式;核心交互组件(卡片/评论/导航栏)自研成本更低、可控性更强。
 
 ## 2. 整体分层架构
 
@@ -75,8 +75,8 @@ blogUniappMobile/
 │   ├── question.js         # 博主问答
 │   └── file.js             # uni.uploadFile 封装(封面上传/编辑器插图)
 ├── components/             # ⚠️ 必须保持 <名>/<名>.vue 目录结构(easycom 约定)
-│   ├── glass-navbar/       # 自定义毛玻璃导航栏(自定义导航栏模式,含状态栏适配)
-│   ├── blog-card/          # 博客卡片(马卡龙三色交替/状态标签/置顶标)
+│   ├── glass-navbar/       # 自定义导航栏(白底暖边框,组件名沿用历史)(自定义导航栏模式,含状态栏适配)
+│   ├── blog-card/          # 博客卡片(奶油三色交替/状态标签/置顶标)
 │   ├── category-bar/       # 分类横滑条(数据缓存于 store)
 │   ├── sort-bar/           # 排序胶囊条(综合/最新/最热/点赞)
 │   ├── comment-section/    # 两级楼中楼评论区(自包含:加载/回复/删除)
@@ -181,20 +181,22 @@ async function resetLoad() {         // 筛选变化/下拉刷新:清空重来
 
 ### 4.8 导航栏方案
 
-`pages.json globalStyle.navigationStyle: "custom"` 全局自定义导航,由 `glass-navbar` 组件负责:渐变毛玻璃底、返回键(`getCurrentPages().length > 1 ? navigateBack : switchTab 首页`)、状态栏高度适配(`var(--status-bar-height)`,H5 为 0,App 为真实高度)。Tab 页头部则各自实现,统一加 `statusbar-pad` 类。
+`pages.json globalStyle.navigationStyle: "custom"` 全局自定义导航,由 `glass-navbar` 组件负责:白底暖边框、返回键(`getCurrentPages().length > 1 ? navigateBack : switchTab 首页`)、状态栏高度适配(`var(--status-bar-height)`,H5 为 0,App 为真实高度)。Tab 页头部则各自实现,统一加 `statusbar-pad` 类。
 
 ## 5. 视觉设计体系
 
-设计令牌以 CSS 变量定义在 `App.vue` 的 `page{}` 选择器上,全项目通过 `var(--xxx)` 消费:
+设计语言为「清爽治愈系奶油风」:奶油米白背景 + 纯白扁平卡片 + 治愈墨绿主色 + 暖杏橙点缀(2026-11-18 由粉紫萌系改版而来,与 Web 端前台一致)。设计令牌以 CSS 变量定义在 `App.vue` 的 `page{}` 选择器上,全项目通过 `var(--xxx)` 消费:
 
 | 令牌 | 值 | 用途 |
 |---|---|---|
-| `--brand-grad` | `linear-gradient(135deg,#b79cff,#ff9ecf)` | 品牌渐变:激活态/主按钮/气泡 |
-| `--purple` / `--pink` | `#8b5cf6` / `#e8619c` | 主文字强调/点赞高亮 |
-| `--title-c` | `#6b5b95` | 标题色 |
-| `--mint-grad` | `#6ee7b7→#34d399` | 成功/报名按钮 |
-| `--card-*` | 白 82% + blur + 24rpx 圆角 + 紫柔影 | 毛玻璃卡片 |
-| 页面背景 | `160deg 五色渐变`(紫→粉→薄荷) | 全局 page 背景 |
+| `--brand-grad` | `linear-gradient(135deg,#35785a,#2e6b4f)` | 品牌墨绿:激活态/主按钮/气泡 |
+| `--primary` / `--primary-light` | `#2e6b4f` / `#3f8265` | 主色强调/链接 |
+| `--primary-soft` | `#e7efe6` | 鼠尾草浅底(chip/选中态) |
+| `--accent` / `--accent-grad` | `#e9a23b` / `#f2b558→#e9a23b` | 暖杏橙点缀(提醒/存草稿/高亮) |
+| `--danger` | `#d4574e` | 删除/退出/驳回 |
+| `--title-c` | `#1f3d2e` | 标题色(墨绿黑) |
+| `--card-*` | 纯白 + `#efe8da` 暖边框 + 24rpx 圆角 + 暖柔影 | 扁平卡片(无 blur) |
+| 页面背景 | `180deg #f9f6ee→#f3eee2` | 奶油米白 page 背景 |
 
 通用工具类:`.card` `.pill-btn`(含 `.plain` `.mint` 变体)`.tag` `.line1` `.line2` `.statusbar-pad` `.safe-bottom` `.avatar-ph`。
 

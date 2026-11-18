@@ -121,9 +121,9 @@
 
 	.readall-btn {
 		padding: 8rpx 24rpx;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(139, 92, 246, 0.35);
-		color: var(--purple);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
+		color: var(--primary);
 		border-radius: 999rpx;
 		font-size: 23rpx;
 		font-weight: bold;

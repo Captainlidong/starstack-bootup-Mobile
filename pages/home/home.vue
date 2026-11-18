@@ -164,8 +164,8 @@
 		width: 64rpx;
 		height: 64rpx;
 		border-radius: 18rpx;
-		background: rgba(255, 255, 255, 0.75);
-		box-shadow: 0 6rpx 16rpx rgba(160, 120, 220, 0.25);
+		background: #ffffff;
+		box-shadow: 0 6rpx 16rpx rgba(93, 84, 60, 0.25);
 	}
 
 	.brand-name {
@@ -188,10 +188,10 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 36rpx;
-		background: rgba(255, 255, 255, 0.75);
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		background: #ffffff;
+		border: 1.5px solid #efe8da;
 		border-radius: 50%;
-		box-shadow: 0 6rpx 16rpx rgba(160, 120, 220, 0.18);
+		box-shadow: 0 6rpx 16rpx rgba(93, 84, 60, 0.18);
 	}
 
 	.h-badge {
@@ -212,16 +212,16 @@
 	}
 
 	.search-pill {
-		background: rgba(255, 255, 255, 0.8);
-		border: 1.5px solid rgba(255, 255, 255, 0.65);
+		background: #ffffff;
+		border: 1.5px solid #efe8da;
 		border-radius: 999rpx;
 		padding: 18rpx 30rpx;
-		box-shadow: 0 6rpx 18rpx rgba(160, 120, 220, 0.12);
+		box-shadow: 0 6rpx 18rpx rgba(93, 84, 60, 0.12);
 	}
 
 	.search-ph {
 		font-size: 26rpx;
-		color: #b9aecb;
+		color: #b3bca9;
 	}
 
 	.hot-card {
@@ -253,7 +253,7 @@
 		font-size: 23rpx;
 		font-weight: bold;
 		color: #ffffff;
-		background: #c4b5fd;
+		background: #3f8265;
 		flex-shrink: 0;
 	}
 
@@ -266,7 +266,7 @@
 	}
 
 	.hot-rank.hot-r2 {
-		background: linear-gradient(135deg, #60a5fa, #3b82f6);
+		background: linear-gradient(135deg, #52a37c, #3f8265);
 	}
 
 	.hot-title {
@@ -300,7 +300,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 44rpx;
-		box-shadow: 0 10rpx 26rpx rgba(183, 156, 255, 0.55);
+		box-shadow: 0 10rpx 26rpx rgba(46, 107, 79, 0.55);
 		z-index: 50;
 		transition: transform 0.15s;
 	}

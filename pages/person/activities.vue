@@ -121,7 +121,7 @@
 
 	.pa-arrow {
 		font-size: 44rpx;
-		color: #c9bfd8;
+		color: #b3bca9;
 		flex-shrink: 0;
 	}
 </style>

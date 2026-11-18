@@ -129,8 +129,8 @@
 		display: flex;
 		align-items: center;
 		gap: 12rpx;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(183, 156, 255, 0.4);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.4);
 		border-radius: 999rpx;
 		padding: 14rpx 26rpx;
 	}
@@ -158,7 +158,7 @@
 		font-size: 27rpx;
 		font-weight: bold;
 		flex-shrink: 0;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.hot-sug {
@@ -183,7 +183,7 @@
 		font-size: 23rpx;
 		font-weight: bold;
 		color: #ffffff;
-		background: #c4b5fd;
+		background: #3f8265;
 		flex-shrink: 0;
 	}
 
@@ -196,7 +196,7 @@
 	}
 
 	.hot-r2 {
-		background: linear-gradient(135deg, #60a5fa, #3b82f6);
+		background: linear-gradient(135deg, #52a37c, #3f8265);
 	}
 
 	.hot-title {

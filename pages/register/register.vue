@@ -141,8 +141,8 @@
 		width: 130rpx;
 		height: 130rpx;
 		border-radius: 32rpx;
-		background: rgba(255, 255, 255, 0.7);
-		box-shadow: 0 10rpx 30rpx rgba(160, 120, 220, 0.3);
+		background: #ffffff;
+		box-shadow: 0 10rpx 30rpx rgba(93, 84, 60, 0.3);
 	}
 
 	.auth-name {
@@ -174,8 +174,8 @@
 		width: 100%;
 		height: 88rpx;
 		box-sizing: border-box;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(183, 156, 255, 0.4);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.4);
 		border-radius: 999rpx;
 		padding: 0 34rpx;
 		font-size: 28rpx;
@@ -211,7 +211,7 @@
 	}
 
 	.strength-cell.on.lv3 {
-		background: #34d399;
+		background: #3f8265;
 	}
 
 	.strength-text {
@@ -236,8 +236,8 @@
 		height: 78rpx;
 		border-radius: 16rpx;
 		background: #ffffff;
-		border: 1.5px solid rgba(139, 92, 246, 0.4);
-		box-shadow: 0 4rpx 12rpx rgba(160, 120, 220, 0.18);
+		border: 1.5px solid rgba(46, 107, 79, 0.4);
+		box-shadow: 0 4rpx 12rpx rgba(93, 84, 60, 0.18);
 		flex-shrink: 0;
 	}
 
@@ -247,7 +247,7 @@
 		justify-content: center;
 		font-size: 23rpx;
 		color: var(--text-sub);
-		border: 1.5px dashed rgba(183, 156, 255, 0.5);
+		border: 1.5px dashed rgba(46, 107, 79, 0.5);
 	}
 
 	.submit-btn {
@@ -259,6 +259,6 @@
 		display: flex;
 		justify-content: center;
 		font-size: 25rpx;
-		color: var(--purple);
+		color: var(--primary);
 	}
 </style>

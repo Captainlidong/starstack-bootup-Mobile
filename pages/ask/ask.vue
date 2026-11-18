@@ -87,8 +87,8 @@
 
 	.ask-tip {
 		font-size: 23rpx;
-		color: var(--purple);
-		background: rgba(243, 232, 255, 0.6);
+		color: var(--primary);
+		background: #edf2ea;
 		border-radius: 12rpx;
 		padding: 14rpx 20rpx;
 	}
@@ -101,7 +101,7 @@
 		font-weight: bold;
 		color: var(--title-c);
 		padding: 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.4);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.4);
 	}
 
 	.ask-content {

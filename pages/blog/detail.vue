@@ -172,7 +172,7 @@ import { WEB_URL } from '../../config.js'
 			title: '举报该文章',
 			editable: true,
 			placeholderText: '请填写举报原因(必填)',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					const reason = (res.content || '').trim()
@@ -240,7 +240,7 @@ import { WEB_URL } from '../../config.js'
 	}
 
 	.top-tag {
-		background: linear-gradient(135deg, #ff9ecf, #e8619c);
+		background: linear-gradient(135deg, #f2b558, #e9a23b);
 		color: #ffffff;
 	}
 
@@ -256,7 +256,7 @@ import { WEB_URL } from '../../config.js'
 		align-items: center;
 		gap: 18rpx;
 		padding: 20rpx;
-		background: rgba(243, 232, 255, 0.45);
+		background: #edf2ea;
 		border-radius: 16rpx;
 		margin-bottom: 20rpx;
 	}
@@ -280,7 +280,7 @@ import { WEB_URL } from '../../config.js'
 	.d-author-name {
 		font-size: 29rpx;
 		font-weight: bold;
-		color: var(--purple);
+		color: var(--primary);
 	}
 
 	.d-sub {
@@ -296,13 +296,13 @@ import { WEB_URL } from '../../config.js'
 		font-size: 24rpx;
 		font-weight: bold;
 		flex-shrink: 0;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.d-follow.followed {
-		background: rgba(255, 255, 255, 0.85);
+		background: #ffffff;
 		color: var(--text-sub);
-		border: 1.5px solid rgba(155, 139, 171, 0.4);
+		border: 1.5px solid rgba(141, 156, 144, 0.4);
 		box-shadow: none;
 	}
 
@@ -317,7 +317,7 @@ import { WEB_URL } from '../../config.js'
 	.d-content {
 		font-size: 29rpx;
 		line-height: 1.85;
-		color: #3f3a4d;
+		color: #1f3d2e;
 		word-break: break-word;
 	}
 
@@ -379,7 +379,7 @@ import { WEB_URL } from '../../config.js'
 		align-items: center;
 		gap: 16rpx;
 		padding: 16rpx 0;
-		border-bottom: 1.5px dashed rgba(183, 156, 255, 0.2);
+		border-bottom: 1.5px dashed rgba(46, 107, 79, 0.2);
 	}
 
 	.rel-item:last-child {
@@ -408,11 +408,9 @@ import { WEB_URL } from '../../config.js'
 		right: 0;
 		bottom: 0;
 		display: flex;
-		background: rgba(255, 255, 255, 0.92);
-		backdrop-filter: blur(14px);
-		-webkit-backdrop-filter: blur(14px);
-		border-top: 1.5px solid rgba(255, 255, 255, 0.7);
-		box-shadow: 0 -6rpx 24rpx rgba(160, 120, 220, 0.15);
+		background: #ffffff;
+		border-top: 1.5px solid #efe8da;
+		box-shadow: 0 -6rpx 24rpx rgba(93, 84, 60, 0.15);
 		padding: 14rpx 10rpx;
 		z-index: 90;
 	}
@@ -429,7 +427,7 @@ import { WEB_URL } from '../../config.js'
 	}
 
 	.bar-item:active {
-		background: rgba(243, 232, 255, 0.8);
+		background: #edf2ea;
 	}
 
 	.bar-icon {
@@ -444,7 +442,7 @@ import { WEB_URL } from '../../config.js'
 	}
 
 	.bar-item.on .bar-num {
-		color: var(--pink);
+		color: var(--accent);
 		font-weight: bold;
 	}
 

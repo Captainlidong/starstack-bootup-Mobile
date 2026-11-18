@@ -174,7 +174,7 @@
 		background: var(--brand-grad);
 		color: #ffffff;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.pi-sub {
@@ -186,18 +186,18 @@
 
 	.pi-sub-pill {
 		padding: 8rpx 36rpx;
-		background: rgba(255, 255, 255, 0.7);
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		background: #ffffff;
+		border: 1.5px solid #efe8da;
 		border-radius: 999rpx;
 		font-size: 24rpx;
 		color: var(--title-c);
 	}
 
 	.pi-sub-pill.active {
-		background: #f3e8ff;
-		color: var(--purple);
+		background: #e7efe6;
+		color: var(--primary);
 		font-weight: bold;
-		border-color: rgba(139, 92, 246, 0.35);
+		border-color: rgba(46, 107, 79, 0.35);
 	}
 
 	.pi-list {

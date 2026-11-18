@@ -119,7 +119,7 @@
 		width: 100%;
 		height: 300rpx;
 		display: block;
-		background: #f1e9fb;
+		background: #e7efe6;
 	}
 
 	.act-cover-ph {
@@ -127,7 +127,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 90rpx;
-		background: linear-gradient(135deg, rgba(183, 156, 255, 0.35), rgba(255, 158, 207, 0.35));
+		background: linear-gradient(135deg, rgba(231, 239, 230, 0.85), rgba(253, 241, 220, 0.85));
 	}
 
 	.act-body {
@@ -145,7 +145,7 @@
 
 	.act-descr {
 		font-size: 25rpx;
-		color: #8d82a3;
+		color: #8d9c90;
 		line-height: 1.5;
 	}
 

@@ -97,7 +97,7 @@
 		uni.showModal({
 			title: '删除博客',
 			content: isDraft.value ? '确定删除这篇草稿吗?' : '删除后不可恢复,确定删除吗?',
-			confirmColor: '#e8619c',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					deleteBlog(id).then(() => {
@@ -127,7 +127,7 @@
 		border-radius: 999rpx;
 		font-size: 25rpx;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 		transition: transform 0.15s;
 	}
 
@@ -152,15 +152,15 @@
 
 	.pb-act {
 		padding: 10rpx 28rpx;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1.5px solid rgba(139, 92, 246, 0.35);
-		color: var(--purple);
+		background: #ffffff;
+		border: 1.5px solid rgba(46, 107, 79, 0.35);
+		color: var(--primary);
 		border-radius: 999rpx;
 		font-size: 23rpx;
 	}
 
 	.pb-act.danger {
 		border-color: rgba(224, 92, 92, 0.45);
-		color: #e05c5c;
+		color: #d4574e;
 	}
 </style>

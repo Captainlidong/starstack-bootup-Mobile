@@ -94,7 +94,7 @@
 			title: '回答提问',
 			editable: true,
 			placeholderText: '输入你的回答…',
-			confirmColor: '#8b5cf6',
+			confirmColor: '#2e6b4f',
 			success: (res) => {
 				if (res.confirm) {
 					const ans = (res.content || '').trim()
@@ -143,7 +143,7 @@
 		background: var(--brand-grad);
 		color: #ffffff;
 		font-weight: bold;
-		box-shadow: 0 6rpx 16rpx rgba(183, 156, 255, 0.45);
+		box-shadow: 0 6rpx 16rpx rgba(46, 107, 79, 0.45);
 	}
 
 	.pq-list {
@@ -183,7 +183,7 @@
 
 	.pq-name {
 		font-size: 24rpx;
-		color: var(--purple);
+		color: var(--primary);
 	}
 
 	.pq-status {
@@ -218,8 +218,8 @@
 	}
 
 	.pq-answer {
-		background: rgba(233, 250, 243, 0.7);
-		border: 1.5px solid rgba(52, 211, 153, 0.3);
+		background: #f4f8f1;
+		border: 1.5px solid rgba(46, 107, 79, 0.25);
 		border-radius: 14rpx;
 		padding: 18rpx 20rpx;
 		display: flex;
