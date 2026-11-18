@@ -6,11 +6,13 @@
 	export default {
 		onLaunch() {
 			initStore()
+			// 隐藏原生 tabBar,由自绘 custom-tabbar 组件接管(字号/胶囊选中态自控)
+			uni.hideTabBar({ animation: false, fail: () => { /* 已隐藏或无 tabBar 场景忽略 */ } })
 			if (store.user && store.user.token) {
 				connectWS()
 			}
 			refreshBadges()
-			// 每 30s 轮询未读数,保持 TabBar 角标新鲜(WebSocket 推送实时叠加)
+			// 每 30s 轮询未读数,保持角标新鲜(WebSocket 推送实时叠加)
 			setInterval(() => {
 				if (store.user && store.user.token) refreshBadges()
 			}, 30000)
@@ -56,6 +58,11 @@
 	html,
 	body {
 		height: 100%;
+	}
+
+	/* 自绘 TabBar 接管:H5 兜底隐藏原生 tabBar(uni.hideTabBar 之外的保险) */
+	uni-tabbar {
+		display: none !important;
 	}
 
 	/* #endif */

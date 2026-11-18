@@ -1,7 +1,10 @@
 <template>
 	<view class="page mine-page statusbar-pad">
 		<view class="tab-head">
-			<text class="tab-title">🌸 我的</text>
+			<view class="tab-title-row">
+				<image class="tab-title-icon" :src="icons.mine" mode="aspectFit" />
+				<text class="tab-title">我的</text>
+			</view>
 		</view>
 
 		<!-- 未登录引导 -->
@@ -45,6 +48,8 @@
 
 			<view class="logout-btn" @click="doLogout">退出登录</view>
 		</template>
+
+		<custom-tabbar :current="4" />
 	</view>
 </template>
 
@@ -56,6 +61,12 @@
 	import { absUrl } from '../../utils/format.js'
 	import { closeWS } from '../../utils/ws.js'
 	import { clearBadge } from '../../utils/badge.js'
+import { icon } from '../../utils/icons.js'
+
+	// 页面标题线性图标(与 TabBar 同体系)
+	const icons = {
+		mine: icon('mine', '#2e6b4f')
+	}
 
 	const info = ref({})
 
@@ -129,7 +140,8 @@
 <style>
 	.mine-page {
 		min-height: 100vh;
-		padding-bottom: 60rpx;
+		padding-bottom: calc(170rpx + constant(safe-area-inset-bottom));
+		padding-bottom: calc(170rpx + env(safe-area-inset-bottom));
 	}
 
 	.tab-head {
@@ -281,5 +293,16 @@
 		color: #d4574e;
 		font-size: 29rpx;
 		font-weight: bold;
+	}
+
+	.tab-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+	}
+
+	.tab-title-icon {
+		width: 42rpx;
+		height: 42rpx;
 	}
 </style>

@@ -1,7 +1,10 @@
 <template>
 	<view class="page rec-page statusbar-pad">
 		<view class="tab-head">
-			<text class="tab-title">🌟 为你推荐</text>
+			<view class="tab-title-row">
+				<image class="tab-title-icon" :src="icons.recommend" mode="aspectFit" />
+				<text class="tab-title">为你推荐</text>
+			</view>
 			<text class="tab-sub">根据你的浏览 · 点赞 · 收藏智能生成</text>
 		</view>
 
@@ -17,6 +20,8 @@
 				<view class="load-more" v-if="list.length">{{ finished ? '— 到底啦 🌈 —' : (loading ? '加载中…' : '上拉加载更多') }}</view>
 			</view>
 		</template>
+
+		<custom-tabbar :current="1" />
 	</view>
 </template>
 
@@ -25,6 +30,12 @@
 	import { onLoad, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 	import { recommendForUser } from '../../api/blog.js'
 	import { store, isLogin } from '../../utils/store.js'
+import { icon } from '../../utils/icons.js'
+
+	// 页面标题线性图标(与 TabBar 同体系)
+	const icons = {
+		recommend: icon('recommend', '#2e6b4f')
+	}
 
 	const list = ref([])
 	const pageNum = ref(0)
@@ -80,7 +91,8 @@
 <style>
 	.rec-page {
 		min-height: 100vh;
-		padding-bottom: 40rpx;
+		padding-bottom: calc(160rpx + constant(safe-area-inset-bottom));
+		padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 	}
 
 	.tab-head {
@@ -103,5 +115,16 @@
 
 	.rec-list {
 		padding: 16rpx 24rpx 0;
+	}
+
+	.tab-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+	}
+
+	.tab-title-icon {
+		width: 42rpx;
+		height: 42rpx;
 	}
 </style>

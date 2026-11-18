@@ -8,9 +8,11 @@
 					<text class="brand-name">星栈始动</text>
 				</view>
 				<view class="brand-actions">
-					<view class="h-icon" @click="goEdit">✏️</view>
+					<view class="h-icon" @click="goEdit">
+						<image class="h-icon-img" :src="icons.edit" mode="aspectFit" />
+					</view>
 					<view class="h-icon" @click="goNotification">
-						<text>🔔</text>
+						<image class="h-icon-img" :src="icons.bell" mode="aspectFit" />
 						<view class="h-badge" v-if="unreadTotal > 0">{{ unreadTotal > 99 ? '99+' : unreadTotal }}</view>
 					</view>
 				</view>
@@ -40,8 +42,12 @@
 			<view class="load-more" v-if="list.length">{{ finished ? '— 到底啦 🌈 —' : (loading ? '加载中…' : '上拉加载更多') }}</view>
 		</view>
 
-		<!-- 发布悬浮按钮 -->
-		<view class="fab" @click="goEdit">✏️</view>
+		<!-- 发布悬浮按钮:线性钢笔 + 清爽浅绿 -->
+		<view class="fab" @click="goEdit">
+			<image class="fab-icon" :src="icons.editWhite" mode="aspectFit" />
+		</view>
+
+		<custom-tabbar :current="0" />
 	</view>
 </template>
 
@@ -50,6 +56,14 @@
 	import { onLoad, onShow, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 	import { selectPage, selectTop } from '../../api/blog.js'
 	import { store } from '../../utils/store.js'
+	import { icon } from '../../utils/icons.js'
+
+	// 顶栏/悬浮按钮图标(线性 SVG,与 TabBar 同一体系)
+	const icons = {
+		edit: icon('edit', '#2e6b4f'),
+		bell: icon('bell', '#2e6b4f'),
+		editWhite: icon('edit', '#ffffff', 2)
+	}
 
 	const category = ref('')
 	const sort = ref('composite')
@@ -187,11 +201,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 36rpx;
 		background: #ffffff;
 		border: 1.5px solid #efe8da;
 		border-radius: 50%;
-		box-shadow: 0 6rpx 16rpx rgba(93, 84, 60, 0.18);
+		box-shadow: 0 6rpx 16rpx rgba(93, 84, 60, 0.12);
+	}
+
+	.h-icon-img {
+		width: 38rpx;
+		height: 38rpx;
 	}
 
 	.h-badge {
@@ -286,23 +304,32 @@
 		display: flex;
 		flex-direction: column;
 		gap: 14rpx;
+		/* 为自绘 TabBar 预留高度(约 130rpx + 安全区) */
+		padding-bottom: calc(160rpx + constant(safe-area-inset-bottom));
+		padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 	}
 
+	/* 发布悬浮按钮:清爽浅绿 + 柔影,收起厚重深色 */
 	.fab {
 		position: fixed;
 		right: 34rpx;
-		bottom: 180rpx;
-		width: 100rpx;
-		height: 100rpx;
+		bottom: 210rpx;
+		width: 96rpx;
+		height: 96rpx;
 		border-radius: 50%;
-		background: var(--brand-grad);
+		background: linear-gradient(135deg, #5ba57f, #4a9070);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 44rpx;
-		box-shadow: 0 10rpx 26rpx rgba(46, 107, 79, 0.55);
-		z-index: 50;
+		box-shadow: 0 8rpx 22rpx rgba(74, 144, 112, 0.32), 0 2rpx 6rpx rgba(93, 84, 60, 0.10);
+		border: 1.5px solid rgba(255, 255, 255, 0.55);
+		z-index: 150;
 		transition: transform 0.15s;
+	}
+
+	.fab-icon {
+		width: 42rpx;
+		height: 42rpx;
 	}
 
 	.fab:active {

@@ -2,7 +2,10 @@
 	<view class="page msg-page statusbar-pad">
 		<view class="tab-head">
 			<view class="tab-head-row">
-				<text class="tab-title">💬 消息</text>
+				<view class="tab-title-row">
+					<image class="tab-title-icon" :src="icons.message" mode="aspectFit" />
+					<text class="tab-title">消息</text>
+				</view>
 				<view class="readall-btn" v-if="isLogin() && conversations.length" @click="markAllRead">🧹 一键已读</view>
 			</view>
 			<text class="tab-sub" v-if="isLogin()">私信实时送达 · 点击会话开始聊天</text>
@@ -33,6 +36,8 @@
 					text="还没有私信~ 去别人的主页打个招呼吧" />
 			</view>
 		</template>
+
+		<custom-tabbar :current="3" />
 	</view>
 </template>
 
@@ -44,6 +49,12 @@
 	import { absUrl, fmtTime } from '../../utils/format.js'
 	import { on, off } from '../../utils/ws.js'
 	import { refreshBadges } from '../../utils/badge.js'
+import { icon } from '../../utils/icons.js'
+
+	// 页面标题线性图标(与 TabBar 同体系)
+	const icons = {
+		message: icon('message', '#2e6b4f')
+	}
 
 	const conversations = ref([])
 	const loading = ref(false)
@@ -103,7 +114,8 @@
 <style>
 	.msg-page {
 		min-height: 100vh;
-		padding-bottom: 40rpx;
+		padding-bottom: calc(160rpx + constant(safe-area-inset-bottom));
+		padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 	}
 
 	.tab-head {
@@ -222,5 +234,16 @@
 	.conv-last {
 		font-size: 25rpx;
 		color: var(--text-sub);
+	}
+
+	.tab-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+	}
+
+	.tab-title-icon {
+		width: 42rpx;
+		height: 42rpx;
 	}
 </style>

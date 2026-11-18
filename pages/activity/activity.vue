@@ -1,7 +1,10 @@
 <template>
 	<view class="page act-page statusbar-pad">
 		<view class="tab-head">
-			<text class="tab-title">🎪 活动中心</text>
+			<view class="tab-title-row">
+				<image class="tab-title-icon" :src="icons.activity" mode="aspectFit" />
+				<text class="tab-title">活动中心</text>
+			</view>
 			<text class="tab-sub">线下技术沙龙 · 线上共享活动</text>
 		</view>
 
@@ -25,6 +28,8 @@
 			<empty-state v-if="!loading && !list.length" emoji="🗓️" text="暂时没有活动,敬请期待~" />
 			<view class="load-more" v-if="list.length">{{ finished ? '— 到底啦 🌈 —' : (loading ? '加载中…' : '上拉加载更多') }}</view>
 		</view>
+
+		<custom-tabbar :current="2" />
 	</view>
 </template>
 
@@ -33,6 +38,12 @@
 	import { onLoad, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 	import { selectPage } from '../../api/activity.js'
 	import { absUrl, fmtTime } from '../../utils/format.js'
+import { icon } from '../../utils/icons.js'
+
+	// 页面标题线性图标(与 TabBar 同体系)
+	const icons = {
+		activity: icon('activity', '#2e6b4f')
+	}
 
 	const list = ref([])
 	const pageNum = ref(0)
@@ -80,7 +91,8 @@
 <style>
 	.act-page {
 		min-height: 100vh;
-		padding-bottom: 40rpx;
+		padding-bottom: calc(160rpx + constant(safe-area-inset-bottom));
+		padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 	}
 
 	.tab-head {
@@ -158,5 +170,16 @@
 	.act-meta-item {
 		font-size: 23rpx;
 		color: var(--text-sub);
+	}
+
+	.tab-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+	}
+
+	.tab-title-icon {
+		width: 42rpx;
+		height: 42rpx;
 	}
 </style>

@@ -202,6 +202,15 @@ async function resetLoad() {         // 筛选变化/下拉刷新:清空重来
 
 移动端布局原则:**单列卡片流 + 底部 TabBar + 触底加载**,不做 Web 布局的压缩移植。
 
+### 5.1 底部导航:自绘 custom-tabbar
+
+原生 tabBar 的字号与样式无法定制(系统写死,偏小且与奶油风不协调),因此运行期调用 `uni.hideTabBar()` 隐藏原生栏,由 `components/custom-tabbar` 接管:
+
+- 悬浮圆角白卡片(左右留边 + 底部安全区),胶囊选中态(鼠尾草浅绿底 + 墨绿图标文字)
+- 图标来自 `utils/icons.js` 的**线性 SVG 图标库**(feather 风格 1.8 描边,data URI 直接给 `<image>`),与首页顶栏、悬浮发布按钮、各 Tab 页标题共用同一套线条语言
+- 未读角标改为组件内红点,直接消费 `store.unread.message`(WS 推送 + 30s 轮询驱动,见 `utils/badge.js`)
+- `pages.json tabBar.list` 仍需保留:uni-app 的 `switchTab` API 依赖其配置(只是不再渲染)
+
 ## 6. 平台差异与兼容性
 
 | 关注点 | H5 | 安卓 App |
