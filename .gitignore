@@ -3,3 +3,6 @@ node_modules/
 .hbuilderx/
 .zcode/
 *.log
+
+# 内部私有文档(含真实服务器地址/账号/运维细节,严禁推送)
+docs/internal/
