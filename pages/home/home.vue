@@ -55,7 +55,7 @@
 	import { ref, computed } from 'vue'
 	import { onLoad, onShow, onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 	import { hideNativeTabBar } from '../../utils/tabbar.js'
-	import { selectPage, selectTop } from '../../api/blog.js'
+	import { selectPage, selectTopWithLikes } from '../../api/blog.js'
 	import { store } from '../../utils/store.js'
 	import { icon } from '../../utils/icons.js'
 
@@ -106,8 +106,8 @@
 	}
 
 	function loadHot() {
-		selectTop().then(rows => {
-			hotList.value = (rows || []).slice(0, 3)
+		selectTopWithLikes(3).then(rows => {
+			hotList.value = rows
 		}).catch(() => { /* 热榜失败不阻塞 */ })
 	}
 

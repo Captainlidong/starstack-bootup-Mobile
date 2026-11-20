@@ -5,6 +5,22 @@ import { get, post, put, del } from '../utils/request.js'
 export const selectPage = (params) => get('/blog/selectPage', params)
 export const selectById = (id) => get('/blog/selectById/' + id)
 export const selectTop = () => get('/blog/selectTop')
+
+// 热榜 + 真实点赞数:后端 selectTop 的 SQL 不联查点赞计数(likesCount 为 null),
+// 这里逐条用 selectById 的联查字段回填(热榜仅 3~6 条,selectById 公开且无副作用)
+export async function selectTopWithLikes(limit = 6) {
+	const rows = await selectTop()
+	const list = (rows || []).slice(0, limit)
+	await Promise.all(list.map(async (b, i) => {
+		try {
+			const full = await selectById(b.id)
+			if (full && list[i] && list[i].id === full.id) {
+				list[i].likesCount = full.likesCount
+			}
+		} catch (e) { /* 补数失败保持原值,不阻塞热榜展示 */ }
+	}))
+	return list
+}
 export const selectRecommend = (blogId) => get('/blog/selectRecommend/' + blogId)
 export const updateReadCount = (id) => put('/blog/updateReadCount/' + id)
 export const addBlog = (data) => post('/blog/add', data)

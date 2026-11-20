@@ -39,7 +39,7 @@
 <script setup>
 	import { ref, computed } from 'vue'
 	import { onReachBottom } from '@dcloudio/uni-app'
-	import { selectPage, selectTop } from '../../api/blog.js'
+	import { selectPage, selectTopWithLikes } from '../../api/blog.js'
 
 	// 自定义导航占位高度
 	const statusBarHeight = uni.getWindowInfo ? uni.getWindowInfo().statusBarHeight || 0 : 0
@@ -55,8 +55,8 @@
 	const finished = ref(false)
 	const hotList = ref([])
 
-	selectTop().then(rows => {
-		hotList.value = (rows || []).slice(0, 6)
+	selectTopWithLikes(6).then(rows => {
+		hotList.value = rows
 	}).catch(() => { /* 忽略 */ })
 
 	async function loadMore() {
